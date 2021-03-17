@@ -1,0 +1,66 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: calc(100% - 24px);
+}
+
+.group-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: calc(100% - 80px);
+}
+
+.group-panel__options {
+  padding: 0.3rem;
+}
+
+.group-panel__main {
+  flex: 1 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.3rem;
+}
+
+@media (min-width: 700px) {
+  .group-panel {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.group-panel h2 {
+  margin-top: 0.6rem;
+}
+
+.group-panel__main iframe {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #c0c0c0;
+}
+
+.group-panel__message {
+  font-size: 1rem;
+  color: orange;
+}
+.group-panel--loaded .group-panel__message {
+  color: green;
+}
+
+.group-panel__header button {
+  margin-left: 0.3rem;
+  visibility: hidden;
+}
+
+.group-panel--loaded button {
+  visibility: visible;
+}
+
+.group-panel--iframe {
+  flex: 1 0;
+  align-self: stretch;
+}

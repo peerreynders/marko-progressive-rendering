@@ -1,0 +1,8 @@
+.render-options ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.render-options--checked {
+  font-weight: bold;
+}

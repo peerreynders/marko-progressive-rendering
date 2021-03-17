@@ -1,0 +1,10 @@
+import { MODE_ENTRIES } from '../../lib/renderMode';
+<fieldset class="render-options">
+  <legend>Page Render Mode</legend>
+  <ul>
+    <for|[ type, desc ]| of=MODE_ENTRIES>
+      <if(type !== input.renderMode)><li><a href=`/?renderMode=${type}`>${desc}</a></li></if>
+      <else><li class="render-options--checked">${desc}</li></else>
+    </for>
+  </ul>
+</fieldset>

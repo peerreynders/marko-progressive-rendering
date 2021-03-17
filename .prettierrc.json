@@ -1,0 +1,24 @@
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "parser": "babel",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": ["*.json", ".eslintrc"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}

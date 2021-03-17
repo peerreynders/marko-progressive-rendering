@@ -1,0 +1,56 @@
+<p>Top text</p>
+
+<await(input.headerDataProvider('header','1', 'Header', 750)) name="header" client-reorder=input.reorderEnabled >
+  <@then|header|>
+  <click-banner tagname=header.tagname>
+    <@title>
+    ${header.section}) ${header.name}
+    </@title>
+  </click-banner>
+  </@then>
+</await>
+
+<await(input.navDataProvider('nav','2', 'Nav', 500)) show-after="header" client-reorder=input.reorderEnabled >
+  <@then|nav|>
+  <click-banner tagname=nav.tagname>
+    <@title>
+    ${nav.section}) ${nav.name}
+    </@title>
+  </click-banner>
+  </@then>
+</await>
+
+<await(input.mainDataProvider('main','3', 'Main', 3000)) timeout=5000 client-reorder=input.reorderEnabled >
+  <@placeholder>
+    Loading "main"...
+  </@placeholder>
+
+  <@then|main|>
+  <click-banner tagname=main.tagname>
+    <@title>
+    ${main.section}) ${main.name}
+    </@title>
+  </click-banner>
+  </@then>
+
+  <@catch|error|>
+  <if(error.name === 'TimeoutError' )>
+    A timeout occurred!
+  </if>
+  <else>
+    ${error.name} error: ${error.message}
+  </else>
+  </@catch>
+</await>
+
+<await(input.footerDataProvider('footer','4', 'Footer', 1000)) client-reorder=input.reorderEnabled >
+  <@then|footer|>
+  <click-banner tagname=footer.tagname>
+    <@title>
+    ${footer.section}) ${footer.name}
+    </@title>
+  </click-banner>
+  </@then>
+</await>
+
+<p>Bottom text</p>

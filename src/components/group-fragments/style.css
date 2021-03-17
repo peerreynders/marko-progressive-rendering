@@ -1,0 +1,25 @@
+.click-banner {
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  color: white;
+}
+
+header.click-banner {
+  background-color: #16a085;
+}
+
+nav.click-banner {
+  background-color: #e67e22;
+}
+
+main.click-banner {
+  background-color: #c0392b;
+}
+
+footer.click-banner {
+  background-color: #8e44ad;
+}
+
+.click-banner.click-banner--clicked {
+  background-color: #2c3e50;
+}

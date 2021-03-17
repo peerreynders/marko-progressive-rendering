@@ -1,0 +1,10 @@
+.click-banner {
+  cursor: pointer;
+}
+
+.click-banner h2 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0.7rem 0;
+}

@@ -1,0 +1,14 @@
+<div class="group-panel">
+  <section class="group-panel__options">
+    <h2>Options</h2>
+    <render-options renderMode=input.renderMode />
+  </section>
+  <main class="group-panel__main">
+    <h2 key="loading" class="group-panel__header">
+      <span key="message" class="group-panel__message"></span>
+      <button type="button" class="app-button app-button--small" on-click('refreshPage')>↺ Refresh</button>
+      <button type="button" class="app-button app-button--small" on-click('openWindow')>↗ Open in New Window</button>
+    </h2>
+    <iframe class="group-panel--iframe" src="about:blank" key="iframe"></iframe>
+  </main>
+</div>
