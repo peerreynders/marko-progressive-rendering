@@ -1,16 +1,16 @@
-const browserslist = require('browserslist');
+function isServer({ target }) {
+  return target === 'server';
+}
 
 module.exports = (api) => {
-  const env = api.caller((it) => it.env);
+  const presets = ['@babel/env'];
 
-  return {
-    presets: [
-      [
-        '@babel/env',
-        {
-          targets: env ? browserslist(null, { env }) : 'current node',
-        },
-      ],
-    ],
-  };
+  return api.caller(isServer)
+    ? {
+        presets,
+        targets: { node: 'current' },
+      }
+    : {
+        presets,
+      };
 };
